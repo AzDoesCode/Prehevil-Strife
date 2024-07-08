@@ -1,0 +1,174 @@
+body {
+    background-image: url("../../media/img/backgrounds/tower.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#lobbyLayout {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid:
+    "teamBox formatBox newsBox" 100%
+    / 40% 30% 30%;
+  gap: 8px;
+}
+
+.teamBox { grid-area: teamBox; }
+.formatBox { grid-area: formatBox; }
+.newsBox { grid-area: newsBox; }
+
+.teamBox, .formatBox, .newsBox {
+  padding: 50px;
+}
+
+#btn_return {
+  width: 125px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  float: right;
+}
+
+#playBox, #formatsBox {
+  border: medium solid #a69a96;
+  outline: thin solid #5d5653;
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(168, 160, 159, 0.75);
+}
+
+#formatsBox {
+  height: 100px;
+}
+
+.labelBox {
+  padding: 25px 25px 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+#teamSelect, #formatSelect {
+  width: 250px;
+  font-size: 18px;
+}
+
+#buttonHolder button {
+  width: 250px;
+  font-size: 16px;
+}
+
+.btnTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#battleLayout {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid:
+    "playerSide battleStage enemySide" 70%
+    "battleMenu battleOptions battleOptions" 30%
+    / 15% 70% 15%;
+}
+
+.playerSide { grid-area: playerSide; }
+.battleStage { grid-area: battleStage; }
+.enemySide { grid-area: enemySide; }
+.battleMenu { grid-area: battleMenu; }
+.battleOptions { grid-area: battleOptions; }
+
+.playerSide, .enemySide {
+  border: medium solid #a69a96;
+  outline: thin solid #5d5653;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(168, 160, 159, 0.75);
+}
+
+.playerSide {
+  padding-top: 100%;
+}
+
+.battleMenu, .battleOptions {
+  border: medium solid #776a65;
+  outline: thin solid #413c3a;
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+  line-height: 40px;
+  background-color: rgba(120, 110, 108, 0.75); 
+}
+
+.battleMenu {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.btlBtn {
+  cursor: pointer;
+}
+
+.btlBtn:hover, .highlight {
+  background-color: rgba(0, 0, 205, 0.35); 
+  border-radius: 50%;
+}
+
+#playerBattleSide, #enemyBattleSide {
+  float:left;
+  width: 48%;
+  height: 100%;
+  padding: 10px;
+}
+
+#enemyBattleSide {
+  padding-top: 5%;
+}
+
+#playerBattleSide {
+  padding-top: 30%;
+}
+
+.enemyBox {
+  float: right;
+  width: 140px;
+  height: 140px;
+}
+
+.enemyC, .playerC {
+  position: absolute;
+  z-index: 1;
+}
+
+.enemyA, .playerA {
+  position: absolute;
+  z-index: 2;
+}
+
+.enemyN, .playerN {
+  position: absolute;
+  z-index: 3;
+  font-size: 24px;
+  color: white;
+}
+
+.playerBox {
+  float: left;
+  width: 140px;
+  height: 140px;
+}
